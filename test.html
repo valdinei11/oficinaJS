@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html>  
+<html>
+    <head>
+        <title>Formulário</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
     <body>
         <script>
             function validar() {
                 if (document.form.nome.value == "") {
                     alert("O campo 'Nome' é obrigatório");
+                    document.form.nome.focus();
                     return false;
-                };
+                }
             }
         </script>
         <form name="form">
