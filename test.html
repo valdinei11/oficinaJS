@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>  
+    <body>
+        <script>
+            function validar() {
+                if (document.form.nome.value == "") {
+                    alert("O campo 'Nome' é obrigatório");
+                    return false;
+                };
+            }
+        </script>
+        <form name="form">
+            <input type="text" name="nome">
+            <input type="submit" onclick="return validar();">
+        </form>
+    </body>
+</html>

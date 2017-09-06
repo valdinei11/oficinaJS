@@ -67,7 +67,10 @@ function validar() {
         return false;
     }
 
-    if (cpf == null) {
+    // Retirar todas as pontuações e hífens do CPF
+    cpf = cpf.replace(/\.|\-|\s/g, '');
+
+    if (cpf == "") {
         alert("Campo 'CPF' obrigatório!");
         return false;
     } else if (cpf.length < 11) {
