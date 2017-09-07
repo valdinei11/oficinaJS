@@ -9,6 +9,13 @@ Deseja-se que o aprendiz tenha conhecimento em lógica de programação (prefere
 
 ## Roteiro básico
 * Breve história da linguagem
+* Ligar arquivo externo de JS com uma página HTML
 * Sintaxe básica do JavaScript
 * Funções
-* 
+  
+* Formulário com um campo de texto e um botão para submeter os dados informados, a serem mostrados em um `alert()`;
+* Atividades com inserção de novos tipos de formulários
+* Utilizar meios de validação utilizandos técnicas simples em JavaScript e HTML  
+
+* Algoritmo para validação de CPF
+* "Máscara" para campos de textos. Ex: `___.___.___-__` e `(__)____-____`
