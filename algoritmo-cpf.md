@@ -32,14 +32,17 @@ Vamos acompanhar: 162 dividido por 11 obtemos 14 como quociente e 8 como resto d
 ## Calculando o Segundo Dígito Verificador
 
 1) Para o cálculo do segundo dígito será usado o primeiro dígito verificador já calculado. Montaremos uma tabela semelhante a anterior só que desta vez usaremos na segunda linha os valores 11,10,9,8,7,6,5,4,3,2 já que estamos incorporando mais um algarismo para esse cálculo. Veja:
-
+```
 1	1	1	4	4	4	7	7	7	3
 11	10	9	8	7	6	5	4	3	2
+```
 2) Na próxima etapa faremos como na situação do cálculo do primeiro dígito verificador, multiplicaremos os valores de cada coluna e efetuaremos o somatório dos resultados obtidos: (11+10+...+21+6) = 204.
-
+```
 1	1	1	4	4	4	7	7	7	3
 11	10	9	8	7	6	5	4	3	2
+--------------------------------------------------------------------------
 11	10	9	32	28	24	35	28	21	6
+```
 3) Realizamos novamente o cálculo do módulo 11. Dividimos o total do somatório por 11 e consideramos o resto da divisão.
 
 Vamos acompanhar: 204 dividido por 11 obtemos 18 como quociente e 6 como resto da divisão.
@@ -50,8 +53,5 @@ Vamos acompanhar: 204 dividido por 11 obtemos 18 como quociente e 6 como resto d
 
 ## Conclusão
 
-Neste caso chegamos ao final dos cálculos e descobrimos que os dígitos verificadores do nosso CPF hipotético são os números 3 e 5, portanto o CPF ficaria assim: 111.444.777-35.
-
-O gerador de cpf apresentado neste site funciona com base neste algoritmo. A rotina de gerar CPF 's válidos, inicialmente sorteia 9 números. Calcula-se o 1o dígito verificador e integra-se o mesmo aos 9 números iniciais. Prossegue-se com o cálculo do segundo dígito verificador como ensinado. Ao final, o criador de CPF emite um número de CPF válido.
-
-A geração de CNPJ's válidos funciona de maneira análoga. Caso seja do seu interesse, consulte mais informações sobre o algoritmo do cnpj.
+Após estes cálculos, descobrimos que os dígitos verificadores do CPF hipotético são os números 3 e 5, portanto o CPF ficaria assim: 111.444.777-35.  
+O validador de cpf apresentado funciona com base neste algoritmo. Com o CPF completo dado pelo usuário, calcula-se o 1º dígito verificador e verifica se este faz parte do que foi digitado. Caso seja, prossegue-se com o cálculo do segundo dígito verificador. Ao final, a função `validar()` retorna `true` ou `false`, dependendo do CPF digitado.
