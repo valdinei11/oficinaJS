@@ -3,16 +3,23 @@
     <head>
         <title>Formulário</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div id="header"></div>
-        <h1>Formulário Completo de Cadastro</h1>
+        <h1>Oficina de Validação de Dados com JavaScript</h1><br>
+        <h2>Formulário para Entrada de Dados</h2><br>
+        <script>
+            function capturar() {
+                var nome1 = document.form.nome.value;
+                var txt = document.getElementById("id1").innerHTML;
+                alert(txt + nome1);
+            }
+        </script>
         <form name="form">
-            <label for="nome">Nome: </label><input type="text" name="nome"><br><br>
-            <label for="email">E-Mail: </label><input type="email" name="email"><br><br>
-            <label for="cpf">CPF: </label><input type="number" name="cpf"> (apenas números)<br><br>
-            <label for="senha">Senha: </label><input type="password" name="senha"><br><br>
-            <input type="submit" onclick="return validar();">
+            <label id="id1" for="nome">Nome: </label><br>
+            <input type="text" id="ident" name="nome" required><br><br>
+            <input type="submit" onclick="capturar();">
         </form>
     </body>
 </html>
