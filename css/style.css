@@ -1,3 +1,7 @@
 body {
     margin: 50px;
 }
+
+p#txt {
+    padding: 13px;
+}

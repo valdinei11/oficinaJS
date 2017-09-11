@@ -8,7 +8,6 @@ function validarCPF(cpf) {
     }
 
     // CALCULANDO E VERIFICANDO PRIMEIRO DÍGITO
-
     // Como declarado no algoritmo, cada um dos 9 primeiros dígitos do CPF serão multiplicados por 10 a 2, da esquerda para a direita.
     // No laço de repetição abaixo, a função SUBSTRING separa os caracteres do CPF, multiplica pelo seu respectivo peso (de 10 a 2) e por fim é adicionado ao valor total da soma, armazenado na variável SOMA
 	for (i=1; i<=9; i++) {
@@ -34,15 +33,12 @@ function validarCPF(cpf) {
     for (i = 1; i <= 10; i++) {
         soma = soma + parseInt(cpf.substring(i-1, i)) * (12 - i);
     }
-
     resto = soma % 11;
-	
     if (resto < 2) {
         resto = 0;
     } else {
         resto = 11-resto;
     }
-
     if (resto != parseInt(cpf.substring(10, 11))) {
         return false;
     }

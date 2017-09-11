@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulário</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1>Oficina de Validação de Dados com JavaScript</h1><br>
+        <h2>Estabelecendo Limites</h2><br>
+        <p>Número da Sorte:</p>
+        <input type="number" id="num" max="500"><br><br>
+        <button type="submit" onclick="return limitar();" class="btn btn-primary">Click!</button>
+        <script>
+            function limitar() {
+                txt = document.getElementById("txt");
+                if (document.getElementById("num").validity.rangeOverflow) {
+                    txt.innerHTML = "Número acima do intervalo permitido. Digite um número entre 100 e 500!";
+                    txt.className = "bg-danger"; return false;
+                } else {
+                    txt.innerHTML = "Número dentro do limite permitido!";
+                    txt.className = "bg-success"; return true;
+                }
+            }
+        </script>
+        <br><br><p id="txt"></p>
+    </body>
+</html>
