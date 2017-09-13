@@ -8,18 +8,13 @@
     </head>
     <body>
         <h1>Oficina de Validação de Dados com JavaScript</h1><br>
+        <button class="btn btn-default" onclick="mudar()">Mudar texto</button><br><br>
+        <h4 id="test">Parágrafo inicial para ser alterado via JavaScript</h4>
         <script>
-            function capturar() {
-                var nome1 = document.form.nome.value;
-                var txt = document.getElementById("id1").innerHTML;
-                alert(txt + nome1);
+            function mudar() {
+                var txt = document.getElementById("test");
+                txt.innerHTML = "Texto alterado com sucesso!";
             }
         </script>
-        <form name="form">
-            <legend>Formulário Simples para Entrada de Dados</legend>
-            <label id="id1" for="nome">Nome: </label><br>
-            <input type="text" id="ident" name="nome" required><br><br>
-            <input type="submit" onclick="capturar();">
-        </form>
     </body>
 </html>
