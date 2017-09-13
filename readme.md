@@ -22,5 +22,5 @@ Deseja-se que o aprendiz tenha conhecimento em lógica de programação (prefere
 
 
 ## Ver Mais
-<a name="note1">1.</a> [Algoritmo de Validação de CPF](https://github.com/valdinei11/oficinaJS/blob/master/algoritmo-cpf.md)
+<a name="note1">1.</a> [Algoritmo de Validação de CPF](https://github.com/valdinei11/oficinaJS/blob/master/algoritmo-cpf.md)  
 <a name="note2">2.</a> [Arquivo JS com máscara de CPF](https://github.com/valdinei11/oficinaJS/blob/master/js/mask.js)
