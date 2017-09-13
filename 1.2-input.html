@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <title>Formulário</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1>Oficina de Validação de Dados com JavaScript</h1><br>
+        <script>
+            function capturar() {
+                var nome = document.form.nome.value;
+                var txt = document.getElementById("nomL").innerHTML;
+                alert(txt + nome);
+            }
+        </script>
+        <form name="form">
+            <legend>Formulário Simples para Entrada de Dados</legend>
+            <label id="nomL" for="nome">Nome: </label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+            <input type="submit" onclick="capturar();">
+        </form>
+    </body>
+</html>

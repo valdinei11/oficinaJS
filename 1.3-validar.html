@@ -9,11 +9,13 @@
     <body>
         <script>
             function validar() {
+                // var nome = document.form.nome.value
                 if (document.form.nome.value == "") {
                     alert("O campo 'Nome' é obrigatório");
                     document.form.nome.focus();
                     return false;
                 }
+                return true;
             }
         </script>
         <form name="form">

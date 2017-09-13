@@ -8,7 +8,6 @@
     </head>
     <body>
         <h1>Oficina de Validação de Dados com JavaScript</h1><br>
-        <h2>Formulário para Entrada de Dados</h2><br>
         <script>
             function capturar() {
                 var nome1 = document.form.nome.value;
@@ -17,6 +16,7 @@
             }
         </script>
         <form name="form">
+            <legend>Formulário Simples para Entrada de Dados</legend>
             <label id="id1" for="nome">Nome: </label><br>
             <input type="text" id="ident" name="nome" required><br><br>
             <input type="submit" onclick="capturar();">
