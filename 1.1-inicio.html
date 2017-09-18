@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>  
     <head>
-        <title>Formulário</title>
+        <title>Formulário Inicial</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Importação do framework CSS Bootstrap, especializado em responsividade -->
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <h1>Oficina de Validação de Dados com JavaScript</h1><br>
         <button class="btn btn-default" onclick="mudar()">Mudar texto</button><br><br>
         <h4 id="test">Parágrafo inicial para ser alterado via JavaScript</h4>
+
+        <!-- A tag SCRIPT pode ser colocada tanto no HEAD quanto no início ou fim do BODY -->
+        <!-- O aconselhável é que coloque no final do BODY, para que permita o carregamento da página antes de carregar um script -->
         <script>
+            // Usa-se duas barras para fazer um comentário acerca do código, que é o que eu estou fazendo
+            // Esta função é para alterar o conteúdo de um elemento HTML
             function mudar() {
+                // Cria-se uma variável com o seguinte comando: "VAR [nome da variavel] = [valor opcional];"
+                // O método 'getElementById', como o nome já diz, pega o elemento com o ID citado, neste caso 'test'
                 var txt = document.getElementById("test");
+                // O 'innerHTML' é o conteúdo do elemento. Interpreta-se o código abaixo como 'o conteúdo deste elemento é igual a ...'
                 txt.innerHTML = "Texto alterado com sucesso!";
             }
         </script>
