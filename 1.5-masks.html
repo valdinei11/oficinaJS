@@ -8,6 +8,7 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/jquery.maskedinput.min.js"></script>
         <script src="js/mask.js"></script>
+        <!-- Para utilizar máscaras de campos de textos, pode-se utilizar o jQuery junto com o plugin Masked Input, além do arquivo externo do script para personalizar a máscara -->
     </head>
     <body>
         <h1>Oficina de Validação de Dados com JavaScript</h1><br>
@@ -16,6 +17,7 @@
             <label for="cpf">CPF: </label><br>
             <input id="cpf" name="cpf" type="text"><br><br>
             <button type="submit" onclick="alert(document.getElementById('cpf').value);" class="btn btn-default">Cadastrar</button>
+            <!-- Com o alert, será mostrado na tela como o CPF seria enviado para o servidor/BD -->
         </form>
     </body>
 </html>

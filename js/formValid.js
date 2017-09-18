@@ -10,6 +10,9 @@ function validarCPF(cpf) {
     // CALCULANDO E VERIFICANDO PRIMEIRO DÍGITO
     // Como declarado no algoritmo, cada um dos 9 primeiros dígitos do CPF serão multiplicados por 10 a 2, da esquerda para a direita.
     // No laço de repetição abaixo, a função SUBSTRING separa os caracteres do CPF, multiplica pelo seu respectivo peso (de 10 a 2) e por fim é adicionado ao valor total da soma, armazenado na variável SOMA
+
+    // SUBSTRING pega o caractere de cada posição do "vetor de char" (string). Sendo num="1234", ex: cpf.substring(2, 3) é igual a 3
+    // O metódo PARSEINT converte um char/string para int, para que o cálculo seja efetuado
 	for (i=1; i<=9; i++) {
         soma = soma + parseInt(cpf.substring(i-1, i)) * (11 - i);
     }
@@ -63,16 +66,18 @@ function validar() {
         return false;
     }
 
-    // Retirar todas as pontuações e hífens do CPF
+    // Retirar todas as pontuações e hífens do CPF para fazer a validação
     cpf = cpf.replace(/\.|\-|\s/g, '');
 
     if (cpf == "") {
         alert("Campo 'CPF' obrigatório!");
         return false;
     } else if (cpf.length < 11) {
+        // Métodod LENGTH retorna a quantidade de caracteres no campo 'cpf'
         alert("Campo 'CPF' com formato inválido!");
         return false;
     } else if (!validarCPF(cpf)) {
+        // Se não validar o CPF, retorna a seguinte mensagem
         alert("CPF Inválido!");
         return false;
     }
