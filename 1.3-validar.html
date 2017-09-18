@@ -10,21 +10,30 @@
         <h1>Oficina de Validação de Dados com JavaScript</h1><br>
         <form name="form">
             <legend>Formulário Simples para Validação de Dados</legend>
-            <label for="nome">Nome: </label><br>
+            <label for="nome">Nome:</label><br>
             <input type="text" id="nome" name="nome" required><br><br>
+            <!-- Neste caso, o ONCLICK terá um retorno (return) booleano, isto é, se a função VALIDAR retornar falso, os dados não serão submetidos. Caso retorne verdadeiro, os dados serão submetidos/enviados -->
             <button class="btn btn-default" type="submit" onclick="return validar();">Validar</button>
         </form>
+        <!-- Nesta tag H4, é onde o texto da validação será colocado -->
         <h4 id="resp" class="text-danger"></h4>
+
         <script>
+            // Podemos retornar uma mensagem de validação de 3 maneiras simples:
+            // 1. Utilizando o atributo REQUIRED do HTML (funciona apenas em navegadores modernos e atualizados)
+            // 2. Adicionando o método ALERT para mostrar um alert com a mensagem desejada
+            // 3. Adicionando uma mensagem no corpo do site. Ex: Um texto na linha abaixo do botão 'Validar/Enviar'
             function validar() {
                 // var nome = document.form.nome.value
                 if (document.form.nome.value == "") {
                     //alert("O campo 'Nome' é obrigatório");
                     document.getElementById("resp").innerHTML = "Atenção: Campo 'nome' é obrigatório!";
-                    document.form.nome.focus();
+                    document.form.nome.focus(); // Este FOCUS serve para por o cursor de digitação no campo/elemento desejado
                     return false;
+                    // Nesta condição retornará falso, pois foi verificado que não há nenhum dado digitado
+                    // A função é imediatamente encerrada ao se deparar com um RETURN;
                 }
-                return true;
+                return true; // Com este retorno, o dado finalmente poderá ser enviado/submetido
             }
         </script>
     </body>
