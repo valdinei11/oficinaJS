@@ -9,15 +9,20 @@
     <body>
         <h1>Oficina de Validação de Dados com JavaScript</h1><br>
         <form name="form">
-            <legend>Formulário Simples para Entrada de Dados</legend>
-            <label id="nomL" for="nome">Nome: </label><br>
+            <legend>Formulário Simples para Entrada de Dados</legend> <!-- Legenda/título do formulário -->
+            <label id="nomL" for="nome">Nome:</label><br> <!-- Quando clicado neste elemento, o cursor é direcionado ao campo referenciado -->
             <input type="text" id="nome" name="nome" required><br><br>
             <button class="btn btn-success" type="submit" onclick="capturar();">Enviar</button>
+            <!-- Com o atributo ONCLICK, quando o usuário clicar no botão, o browser executará a função a que se refere -->
         </form>
         <script>
             function capturar() {
+                // Uma forma de pegar dados de formulários é utilizando o atributo NAME e se direcionando por isso no JS
+                // Exemplo abaixo: Em tal documento, no elemento com o nome 'form', dentro dele, no elemento chamado 'nome', pegue o valor
+                // Além de pegar o valor, dá para alterar atributos e com isso mudar o estilo do elemento, entre outros recursos
                 var nome = document.form.nome.value;
                 var txt = document.getElementById("nomL").innerHTML;
+                // Com o ALERT, será mostrado na tela um alerta com 'txt' (que é o LABEL) e 'nome', que é o valor capturado do campo de texto
                 alert(txt + nome);
             }
         </script>
